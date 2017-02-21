@@ -1,0 +1,31 @@
+$output-bourbon-deprecation-warnings: false //Ждём обновления node-bourbon до 5-й версии
+
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+// Styles...
+
+//
+
+
+@import "media" // Всегда в конце
