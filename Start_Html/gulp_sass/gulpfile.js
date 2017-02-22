@@ -1,5 +1,5 @@
 var gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
+		gutil          = require('gulp-util'),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
@@ -18,7 +18,7 @@ var gulp           = require('gulp'),
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.js' //добавлять остальные через запятую. Common.js всегда в конце.
+		'app/js/common.js' //всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify())
@@ -37,6 +37,8 @@ gulp.task('browser-sync', function() {
 	});
 });
 
+
+// таск компиляции sass
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({
