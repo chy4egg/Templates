@@ -1,0 +1,11 @@
+//- mixins.pug
+
+
+//- List Id Mixin
+
+mixin list(id, ...items)
+	ul(id=id)
+		each item in items
+			li= item
+
+//- +list('my-list', 1, 2, 3, 4)

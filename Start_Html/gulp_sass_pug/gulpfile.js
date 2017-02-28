@@ -42,7 +42,7 @@ gulp.task('sass', function() {
 
 // Compile Pug
 gulp.task('pug', function buildHTML() {
-  return gulp.src('app/index.pug')
+  return gulp.src('app/pages/*.pug')
   .pipe(pug({
     pretty: true
   }))
