@@ -2,4 +2,23 @@ $output-bourbon-deprecation-warnings: false //Ждём обновления node
 
 @import "bourbon"
 
-$default-font: "roboto", sans-serif
+
+// fonts --
+$default-font: "roboto", $helvetica
+
+
+// colors --
+
+// $main-color:
+// $accent-color:
+
+// mixins --
+
+//clearfix mixin ( usage: @include clearfix() )
+@mixin clearfix()
+	&:before
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both

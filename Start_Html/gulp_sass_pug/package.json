@@ -23,6 +23,7 @@
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "magnific-popup": "latest",
     "node-bourbon": "latest",
     "vinyl-ftp": "latest"
   }

@@ -15,10 +15,13 @@ var gulp           = require('gulp'),
 		notify         = require("gulp-notify"),
 		pug        		 = require("gulp-pug");
 
-// Compile Scripts
+// Compile and minimize Scripts
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		// 'app/libs/magnific-popup/jquery.magnific-popup.min.js',
+		// 'app/libs/slick/slick.min.js',
+    // 'app/libs/viewportchecker/jquery.viewportchecker.min.js',
 		'app/js/common.js' //всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -27,7 +30,7 @@ gulp.task('scripts', function() {
 	.pipe(browserSync.stream());
 });
 
-// Compile Sass
+// Compile and minimize Sass -> css
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({
@@ -42,7 +45,7 @@ gulp.task('sass', function() {
 
 // Compile Pug
 gulp.task('pug', function buildHTML() {
-  return gulp.src('app/pages/*.pug')
+  return gulp.src('app/pug/pages/*.pug')
   .pipe(pug({
     pretty: true
   }))

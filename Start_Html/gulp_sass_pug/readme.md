@@ -1,1 +1,1 @@
-<h1>Start HTML Template</h1>
+<h1>gulp_sass_pug start template</h1>
